@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Grids Layout</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+       
+        .parent-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto; 
+            grid-template-columns: 1fr;
+            gap: 20px;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color:lightblue;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .main-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+        }
+
+        .main-section {
+            background-color: lightsalmon;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .nested-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px;
+        }
+
+        .nested-item {
+            background-color: #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        @media (max-width: 768px) {
+            .main-sections {
+                grid-template-columns: 1fr; 
+            }
+
+            .nested-grid {
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-container">
+        <header>
+            <h1>My Website</h1>
+            <p>Welcome to our website! Discover our content and latest updates.</p>
+        </header>
+        
+        <div class="main-sections">
+            <div class="main-section">
+                <h2>About Us</h2>
+                <p>We are dedicated to providing valuable content and resources on various topics. Our mission is to engage and inform our audience with insightful articles and updates.</p>
+                <p>Our team consists of experts and enthusiasts who are passionate about sharing knowledge and experiences. Explore our sections to learn more about what we offer.</p>
+            </div>
+            <div class="main-section">
+                <h2>Featured Topics</h2>
+                <p>This section showcases a range of topics that are currently trending or of significant interest. Dive into our featured topics and discover more about them through our nested grid below.</p>
+                <div class="nested-grid">
+                    <div class="nested-item">
+                        <h3>Technology Trends</h3>
+                        <p>Stay updated with the latest technology trends and innovations that are shaping the future.</p>
+                    </div>
+                    <div class="nested-item">
+                        <h3>Travel Destinations</h3>
+                        <p>Explore exciting travel destinations and find tips for planning your next adventure.</p>
+                    </div>
+                    <div class="nested-item">
+                        <h3>Healthy Living</h3>
+                        <p>Learn about healthy living practices, including nutrition and exercise tips.</p>
+                    </div>
+                    <div class="nested-item">
+                        <h3>Creative Arts</h3>
+                        <p>Discover creative arts and crafts that inspire creativity and self-expression.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </footer>
+    </div>
+</body>
+</html>

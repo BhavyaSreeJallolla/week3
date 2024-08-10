@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling First Line and First Letter</title>
+    <style>
+        p {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        p::first-line {
+            font-size: 1.2em; /* Larger font size for the first line */
+            font-weight: bold; 
+            color: #3498db; /* Text color */
+        }
+
+        p::first-letter {
+            font-size: 2.5em; /* Larger font size for the first letter */
+            color: #e74c3c; /* Text color */
+            background-color: #f0f8ff; /* Background color */
+            float: left; /* Float the first letter to the left */
+            margin-right: 5px; /* Space between the first letter and the text */
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at leo vel ligula gravida fermentum. Sed interdum venenatis libero a tincidunt. Fusce id lorem felis. Integer auctor urna ac nulla blandit, nec tincidunt velit facilisis.</p>
+</body>
+</html>

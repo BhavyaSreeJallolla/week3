@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner </title>
+    <style>
+        :root {
+            --spinner-size: 80px;
+            --spinner-color1: #3498db;
+            --spinner-color2: #2ecc71;
+            --spinner-speed: 1s;
+            --transition-duration: 0.5s;
+        }
+
+        .spinner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1503965830912-6d7b07921cd1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8fA%3D%3D') no-repeat center center; /* Background image */
+            background-size:auto;
+        }
+
+        .spinner {
+            position: relative;
+            width: var(--spinner-size);
+            height: var(--spinner-size);
+            border-radius: 50%;
+            border: 8px solid transparent;
+            border-top: 8px solid var(--spinner-color1);
+            border-bottom: 8px solid var(--spinner-color2);
+            animation: spin var(--spinner-speed) linear infinite;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .spinner::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60%;
+            height: 60%;
+            background: linear-gradient(45deg, var(--spinner-color1), var(--spinner-color2));
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
+        .spinner.dot {
+            position: relative;
+            width: var(--spinner-size);
+            height: var(--spinner-size);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner.dot::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--spinner-color1);
+            animation: dot-pulse var(--spinner-speed) infinite ease-in-out;
+        }
+
+        @keyframes dot-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+        }
+
+        .spinner.bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--spinner-size);
+            width: var(--spinner-size);
+        }
+
+        .spinner.bar div {
+            width: 10px;
+            height: 100%;
+            background: var(--spinner-color1);
+            animation: bar-bounce var(--spinner-speed) infinite;
+        }
+
+        .spinner.bar div:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .spinner.bar div:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bar-bounce {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.5); }
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner-container">
+        <!-- Stylish Spinner -->
+        <div class="spinner"></div>
+
+        <!-- Dot Spinner -->
+        <div class="spinner dot"></div>
+
+        <!-- Bar Spinner -->
+        <div class="spinner bar">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

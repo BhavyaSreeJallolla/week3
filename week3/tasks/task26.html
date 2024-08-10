@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Typography</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .responsive-heading {
+            font-size: 5vw; /* Font size relative to viewport width */
+            color: darkblue;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 600px) {
+            .responsive-heading {
+                font-size: 8vw; /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="responsive-heading">BHAVYA SREE</h1>
+</body>
+</html>

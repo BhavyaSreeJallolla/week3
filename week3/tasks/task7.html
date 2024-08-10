@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Card Layout</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* Grid Container */
+        .grid-container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, 1fr); /* Three columns by default */
+        }
+
+        /* Card Styling */
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.25em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-description {
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* One column on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="card">
+            <img src="https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&w=600" alt="Space">
+            <div class="card-content">
+                <div class="card-title">The Wonders of Space</div>
+                <div class="card-description">Discover the vast and mysterious universe beyond our planet. From the beauty of distant galaxies to the enigma of black holes, this card explores the wonders of space and the latest advancements in astronomy.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/5610386/pexels-photo-5610386.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Culinary Delights">
+            <div class="card-content">
+                <div class="card-title">Culinary Delights</div>
+                <div class="card-description">Explore a world of flavors with diverse and delicious recipes from around the globe. This card features a collection of mouth-watering dishes, cooking tips, and culinary traditions that will tantalize your taste buds.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/2108813/pexels-photo-2108813.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hidden Travel Gems">
+            <div class="card-content">
+                <div class="card-title">Hidden Travel Gems</div>
+                <div class="card-description">Uncover lesser-known travel destinations that offer unique and unforgettable experiences. This card highlights hidden gems that provide a refreshing alternative to popular tourist spots, perfect for your next adventure.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fitness and Wellness">
+            <div class="card-content">
+                <div class="card-title">Fitness and Wellness</div>
+                <div class="card-description">Embrace a healthier lifestyle with practical tips on fitness and wellness. From workout routines and dietary advice to mental health strategies, this card provides valuable insights to help you achieve your wellness goals.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRlY2hub2xvZ3klMjBpbm5vdmF0aW9ufGVufDB8fDB8fHww" alt="Technology Innovations">
+            <div class="card-content">
+                <div class="card-title">Technology Innovations</div>
+                <div class="card-description">Stay up-to-date with the latest technological advancements that are shaping our future. This card covers groundbreaking innovations, from artificial intelligence to smart gadgets, and their impact on our daily lives.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/3735170/pexels-photo-3735170.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Eco-Friendly Living">
+            <div class="card-content">
+                <div class="card-title">Eco-Friendly Living</div>
+                <div class="card-description">Learn how to live more sustainably and reduce your environmental footprint. This card offers practical advice on eco-friendly practices, green products, and tips for making a positive impact on the planet.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

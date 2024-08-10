@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Links</title>
+    <style>
+        /* Base styles for links */
+        a {
+            text-decoration: none;
+            color: #000; /* Default color */
+            padding: 5px;
+            display: inline-block; /* To apply padding properly */
+        }
+
+        /* Hover state: Change color */
+        a:hover {
+            color: #007bff; /* Blue color on hover */
+        }
+
+        /* Focus state: Change background color */
+        a:focus {
+            background-color: #f0f0f0; /* Light gray background on focus */
+            outline: none; /* Remove default focus outline */
+        }
+
+        /* Active state: Change text decoration */
+        a:active {
+            text-decoration: underline; /* Underline text when active */
+        }
+
+        /* Visited state: Change color */
+        a:visited {
+            color: #6c757d; /* Gray color after visit */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#link1">Link 1</a></li>
+        <li><a href="#link2">Link 2</a></li>
+        <li><a href="#link3">Link 3</a></li>
+    </ul>
+</body>
+</html>

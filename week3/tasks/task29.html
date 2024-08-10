@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #da1e8b;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            padding: 1em;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+
+        .section {
+            flex: 1 1 calc(33.333% - 2em); /* 3 columns layout */
+            background-color: #f4f4f4;
+            padding: 1em;
+            box-shadow: 0 0 10px darkblue;
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 900px) {
+            .section {
+                flex: 1 1 calc(50% - 2em); /* 2 columns layout */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .section {
+                flex: 1 1 100%; /* Single column layout */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Layout</h1>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+        <section class="section">
+            <h2>Section 2</h2>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+        <section class="section">
+            <h2>Section 3</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Responsive Layout Example</p>
+    </footer>
+</body>
+</html>

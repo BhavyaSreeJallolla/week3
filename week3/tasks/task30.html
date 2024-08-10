@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with Columns</title>
+    <style>
+        
+        :root {
+            --primary-color: #3498db;   
+            --secondary-color: #2ecc71; 
+            --accent-color: #e74c3c;   
+            
+            
+            --base-font-size: 16px;
+            --heading-font-size: 2rem;
+            
+           
+            --padding: 1em;
+            --margin: 1em;
+        }
+
+       
+        body {
+            font-size: var(--base-font-size);
+            color: var(--primary-color);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: var(--padding);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: var(--heading-font-size);
+        }
+
+        main {
+            padding: var(--padding);
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--margin);
+        }
+
+        .section {
+            background-color: var(--secondary-color);
+            color: #fff;
+            margin: var(--margin);
+            padding: var(--padding);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 2 * var(--margin)); /* 3 columns layout */
+        }
+
+        footer {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: var(--padding);
+            text-align: center;
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 900px) {
+            .section {
+                flex: 1 1 calc(50% - var(--margin)); /* 2 columns layout */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .section {
+                flex: 1 1 100%; /* Single column layout */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Layout with Columns</h1>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Section 1</h2>
+            <p>This is a sample section using CSS variables for styling.</p>
+        </section>
+        <section class="section">
+            <h2>Section 2</h2>
+            <p>The styling of this section is consistent with the defined variables.</p>
+        </section>
+        <section class="section">
+            <h2>Section 3</h2>
+            <p>Variables help maintain design consistency and make updates easier.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Responsive Layout Example</p>
+    </footer>
+</body>
+</html>

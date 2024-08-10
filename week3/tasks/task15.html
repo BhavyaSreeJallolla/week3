@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scrolling</title>
+    <style>
+        .scroll-container {
+            width: 300px; /* Fixed width for the container */
+            white-space: nowrap; /* Prevent child elements from wrapping */
+            overflow-x: scroll; /* Enable horizontal scrolling */
+            border: 1px solid #ccc; /* Optional: Add a border for clarity */
+            padding: 10px; /* Optional: Add some padding */
+        }
+
+        .item {
+            display: inline-block; 
+            width: 150px; 
+            height: 100px; 
+            background-color: lightseagreen;
+            color: white; 
+            text-align: center; 
+            line-height: 100px; 
+            margin-right: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="item">HI</div>
+        <div class="item">HELLO</div>
+        <div class="item">WELCOME</div>
+        <div class="item">NAMASTHE</div>
+        <div class="item">THANK YOU</div>
+        <div class="item">KEEP SMILE</div>
+        <div class="item">BYE</div>
+    </div>
+</body>
+</html>

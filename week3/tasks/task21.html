@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Transition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; 
+        }
+
+
+        .transition-button {
+            background-color: #3498db; /* Initial background color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s, transform 0.5s; /* Transition effect for background color and size */
+        }
+
+        /* Hover effect */
+        .transition-button:hover {
+            background-color: #2ecc71; /* Background color on hover */
+            transform: scale(1.2); /* Increase button size on hover */
+        }
+    </style>
+</head>
+<body>
+    <button class="transition-button">Hover me</button>
+</body>
+</html>

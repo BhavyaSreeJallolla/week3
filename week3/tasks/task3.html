@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Centering</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            border: 2px solid #c02020;
+            padding: 20px;
+            background-color: #ffae00;
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            background-color: bisque;
+        }
+
+        .container button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #19e6dbd0;
+            color: #ffffff;
+            border:purple;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .container button:hover {
+            background-color: #0e0bce;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Centered Content</h1>
+        <p>FEEL THE NATURE</p>
+        <img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D" alt="feel the nature">
+        <button>Click Me</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe Animation</title>
+    <style>
+        
+        .container {
+            width: 100vw; 
+            height: 100vh; 
+            position: relative;
+            overflow: hidden; /* Hide overflow to keep animation within view */
+            background-color: #f0f0f0;
+        }
+
+        .moving-div {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db; 
+            position: absolute; 
+            top: 50%; /* Center vertically */
+            left: 0; /* Start from the left edge */
+            transform: translateY(-50%); /* Center vertically */
+            animation: moveRight 5s linear infinite; /* Apply animation */
+        }
+        @keyframes moveRight {
+            0% {
+                left: 0; /* Start position */
+            }
+            100% {
+                left: 100vw; /* End position  */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="moving-div"></div>
+    </div>
+</body>
+</html>

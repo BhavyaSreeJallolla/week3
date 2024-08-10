@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image</title>
+    <style>
+        /* Ensure the image scales proportionally and doesn't exceed its original size */
+        .responsive-image {
+            max-width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensures the image is treated as a block-level element */
+            margin: 0 auto; /* Center the image horizontally */
+        }
+
+        /* Center the container if needed */
+        .image-container {
+            text-align: center; /* Center contents of the container */
+        }
+
+        /* Media query to adjust the image size based on the viewport width */
+        @media (max-width: 600px) {
+            .responsive-image {
+                width: 80%; /* Adjust width as needed */
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1200px) {
+            .responsive-image {
+                width: 60%; /* Adjust width as needed */
+            }
+        }
+
+        @media (min-width: 1201px) {
+            .responsive-image {
+                width: 40%; /* Adjust width as needed */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://cdn.pixabay.com/photo/2017/08/11/15/51/light-bulb-2631864_1280.jpg" alt="Responsive Image" class="responsive-image">
+    </div>
+</body>
+</html>

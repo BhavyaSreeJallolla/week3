@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Image Gallery</h1>
+    <ul class="gallery">
+        <li class="gallery-item">
+            <img src="https://images.pexels.com/photos/1765126/pexels-photo-1765126.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 1">
+        </li>
+        <li class="gallery-item">
+            <img src="https://images.pexels.com/photos/1042235/pexels-photo-1042235.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 2">
+        </li>
+        <li class="gallery-item">
+            <img src="https://images.pexels.com/photos/1919030/pexels-photo-1919030.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 3">
+        </li>
+        <li class="gallery-item">
+            <img src="https://images.pexels.com/photos/977460/pexels-photo-977460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 4">
+        </li>
+        <li class="gallery-item">
+            <img src="https://images.pexels.com/photos/2131792/pexels-photo-2131792.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 5">
+        </li>
+        <li class="gallery-item">
+            <img src="https://images.pexels.com/photos/620530/pexels-photo-620530.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 6">
+        </li>
+    </ul>
+</body>
+</html>
